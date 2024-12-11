@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: plagiarism-checker
+    env: python
+    buildCommand: "gcc text_trace.c -o text_trace"
+    startCommand: "python server.py"

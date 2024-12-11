@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plagiarism Checker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Plagiarism Checker</h1>
+    </header>
+    <main>
+        <div class="input-section">
+            <div class="text-panel">
+                <h2>Text 1</h2>
+                <textarea id="text1" placeholder="Enter first text..."></textarea>
+            </div>
+            <div class="text-panel">
+                <h2>Text 2</h2>
+                <textarea id="text2" placeholder="Enter second text..."></textarea>
+            </div>
+        </div>
+        <div class="action-panel">
+            <button id="checkSimilarity">Check Similarity</button>
+        </div>
+        <div class="visualization-panel">
+            <h2>Similarity Score: <span id="similarityScore">0%</span></h2>
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
