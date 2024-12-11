@@ -1,8 +1,8 @@
 services:
   - type: web
-    name: plagiarism-checker
+    name: text-trace
     env: python
-    buildCommand: 
-    "pip install -r requirements.txt"
-    "gcc text_trace.c -o text_trace"
-    startCommand: "python server.py"
+    buildCommand: |
+      pip install -r requirements.txt  # Install dependencies
+      gcc plagiarism_checker.c -o plagiarism_checker  # Compile C code
+    startCommand: "gunicorn --bind 0.0.0.0:8000 server:app"  # Use Gunicorn
